@@ -1,4 +1,4 @@
-# Asynchronous TestRail Python Library
+# Asynchronous TestRail API Python
 Modified official TestRail library to work asynchronously using `aiohttp`.
 Requires minimum modifications to start running code asynchronously. Greatly speeding up endpoints that can't be "multi queried" e.g. /get_cases/ for multiple suites.
 Contains the original synchronous methods as well.
