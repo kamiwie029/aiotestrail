@@ -118,8 +118,8 @@ class APIClient:
             payload = bytes(json.dumps(data), 'utf-8')
             return await __post(session, uri, data=payload)
    
-    async def __send_async_get(self, url: str, session: aiohttp.ClientSession, attachment = None):
-        async with session.get(url) as response:
+    async def __send_async_get(self, url: str, session: aiohttp.ClientSession, attachment=None, **kwargs):
+        async with session.get(url, **kwargs) as response:
             await self.__handle_errors(response)
 
             if attachment:
