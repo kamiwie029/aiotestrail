@@ -10,15 +10,6 @@ from aiotestrail import APIClient
 import asyncio
 import aiohttp
 
-''' # I recommend running a .env config file
-import os
-from dotenv import load_dotenv
-
-URL = os.getenv("URL")
-LOGIN = os.getenv("LOGIN")
-PASSWORD = os.getenv("PASSWORD")
-'''
-
 client = APIClient(URL)
 client.user = LOGIN
 client.password = PASSWORD
