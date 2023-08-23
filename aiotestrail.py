@@ -1,18 +1,7 @@
-"""TestRail API binding for Python 3.x.
-
-(API v2, available since TestRail 3.0)
-
-Compatible with TestRail 3.0 and later.
-
-Learn more:
+"""Async TestRail API binding for Python 3.x.
 
 http://docs.gurock.com/testrail-api2/start
 http://docs.gurock.com/testrail-api2/accessing
-
-Original library available at:
-https://github.com/gurock/testrail-api
-
-Modified to run asynchronously by Kamil Wiewióra
 """
 
 import base64
