@@ -81,7 +81,7 @@ class APIClient:
         uri = self.__url + path
 
         if method == "POST":
-            assert data, f"There's no data to post, got: data = {data}"
+            assert data, f"There's no data to post, got: {data=}"
        
             return await self.__send_async_post(uri, session=session, headers=headers)
        
