@@ -83,7 +83,7 @@ class APIClient:
         if method == "POST":
             assert data, f"There's no data to post, got: {data=}"
        
-            return await self.__send_async_post(uri, session=session, headers=headers)
+            return await self.__send_async_post(uri, data=data, session=session, headers=headers)
        
         else:
             attachment = data if uri.startswith('get_attachment/') else None
@@ -99,7 +99,7 @@ class APIClient:
 
         if uri.startswith('add_attachment'):    # add_attachment API method
             files = {'attachment': (open(data, 'rb'))}
-            result = await __post(session, uri, files=files)
+            result = await __post(session, uri, files=files, headers=headers)
             files['attachment'].close()
             return result
         else:
