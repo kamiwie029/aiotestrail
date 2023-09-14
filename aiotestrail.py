@@ -105,7 +105,7 @@ class APIClient:
         else:
             headers['Content-Type'] = 'application/json'
             payload = bytes(json.dumps(data), 'utf-8')
-            return await __post(session, uri, data=payload)
+            return await __post(session, uri, data=payload, headers=headers)
    
     async def __send_async_get(self, url: str, session: aiohttp.ClientSession, attachment=None, **kwargs):
         async with session.get(url, **kwargs) as response:
